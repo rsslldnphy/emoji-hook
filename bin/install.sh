@@ -19,9 +19,9 @@ fi
 
 # link the commit-msg hook
 if [ ! -f $REPO_DIR/.git/hooks/commit-msg ]; then
-  ln -s $(pwd)/commit-msg $REPO_DIR/.git/hooks/commit-msg
+  cp $(pwd)/commit-msg $REPO_DIR/.git/hooks/commit-msg
 fi
 
 if [ ! -f $REPO_DIR/.git/hooks/emojis ]; then
-  ln -s $(pwd)/emojis $REPO_DIR/.git/hooks/emojis
+  cp $(pwd)/emojis $REPO_DIR/.git/hooks/emojis
 fi
