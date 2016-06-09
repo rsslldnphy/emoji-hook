@@ -1,0 +1,4 @@
+test "" = "$(head -n 1 $1 | grep -v "^:\w*:")" || {
+  COMMIT_EMOJI=$(perl -e 'srand; rand($.) < 1 && ($line = $_) while <>; print $line;' $GIT_DIR/hooks/emojis)
+  echo "$COMMIT_EMOJI $(cat $1)" > $1
+}
